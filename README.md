@@ -6,7 +6,7 @@ Basic CRUD functionalities are available:
 - Delete inventory items
 - View a list of Inventory items
 
-This application also allows users to download the product list and product information as a CSV.
+This application also allows users to export product data as a CSV.
 
 ## How to Run the Application
 This application can be accessed at: https://shopify-inventory-tracking-app.herokuapp.com/
