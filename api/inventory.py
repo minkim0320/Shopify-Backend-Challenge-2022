@@ -2,6 +2,9 @@ from flask import request
 from flask_restful import Resource, reqparse
 from models.product import Product
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 # API endpoint for non-identifiable products
 # i.e. getting all products, or creating products
@@ -11,7 +14,7 @@ class Inventory(Resource):
     inventory_list = []
     for product in Product.objects:
       inventory_list.append(product.to_dict())
-    print(inventory_list)
+    logger.debug('GET /api/inventory: ' + str(inventory_list))
     return {"inventory_list":inventory_list}
 
   def post(self):
@@ -35,10 +38,12 @@ class InventoryProduct(Resource):
     response = {
       "product": product.to_dict()
     }
+    logger.debug('GET /api/product'+product_id + ': ' + str(product.to_dict()))
     return response
 
   def put(self, product_id):
     product = Product.objects(id=product_id)[0]
+    logger.debug('PUT /api/product'+product_id + ': ' + str(product.to_dict()))
     if product == None:
       response = {
         "result": "failure"
@@ -55,6 +60,7 @@ class InventoryProduct(Resource):
 
   def delete(self, product_id):
     product = Product.objects(id=product_id)
+    logger.debug('DELETE /api/product'+product_id + ': ' + str(product[0].to_dict()))
     if product == None:
       response = {
         "result": "failure"
