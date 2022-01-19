@@ -5,6 +5,7 @@ Basic CRUD functionalities are available:
 - Edit inventory items
 - Delete inventory items
 - View a list of Inventory items
+
 This application also allows users to download the product list and product information as a CSV.
 
 ## How to Run the Application
