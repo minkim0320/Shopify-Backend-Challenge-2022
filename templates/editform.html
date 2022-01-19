@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Edit Product{% endblock %}
+{% block content %}
+<br>
+<div style="padding: 0% 10%">
+  <h3 style="text-align: center;">Edit Inventory</h3>
+  <br>
+  <small>Please edit the information below</small>
+  <br>
+  <br>
+  <div class="form-group">
+    <input type="text" class="form-control" id="pID" placeholder="Product ID" readonly required>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="pName" placeholder="Product Name" required>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="pDesc" placeholder="Product Description">
+  </div>
+  <div class="form-group form-inline">
+    <div class="form-group">
+      <input type="number" class="form-control" id="pPrice" min="0" value="0" placeholder="Price"  step=".01" required>
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" id="pStock" min="0" value="0" placeholder="Stock" required>
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary" onclick="submitForm()">Finish</button>
+  <button type="submit" class="btn btn-primary" onclick="goBack()">Back to Home</button>
+</div>
+<script src="../static/js/edit.js">
+
+</script>
+{% endblock %}

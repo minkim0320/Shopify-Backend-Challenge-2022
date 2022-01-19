@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Inventory Tracking{% endblock %}
+{% block content %}
+<br>
+<h3 style="text-align: center">Inventory</h3>
+<div id="content" class="table" style="padding: 0% 10%">
+  <button type="submit" class="btn btn-secondary" onclick="exportCSVAll()">Export All to CSV</button>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Product ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+      </tr>
+      <tbody id="tablecontent">
+
+      </tbody>
+    </thead>
+  </table>
+</div>
+<script src="../static/js/home.js">
+</script>
+{% endblock %}
