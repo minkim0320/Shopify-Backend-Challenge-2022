@@ -9,7 +9,7 @@ Basic CRUD functionalities are available:
 This application also allows users to export product data as a CSV.
 
 ## How to Run the Application
-This application can be accessed at: https://shopify-inventory-tracking-app.herokuapp.com/
+This application can be accessed at: https://shopify-inventory-tracking-app.herokuapp.com/ [No longer operating]
 
 However, if you wish to run it locally, the following are required:
 - Python3 (Made with version 3.7.9)
